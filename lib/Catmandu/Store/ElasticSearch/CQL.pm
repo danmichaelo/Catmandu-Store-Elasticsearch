@@ -109,7 +109,7 @@ sub _parse_term_node {
     my $nested;
 
     if ($self->mapping and my $indexes = $self->mapping->{indexes}) {
-        $qualifier = lc $qualifier;
+        # $qualifier = lc $qualifier;
         $qualifier =~ s/(?<=[^_])_(?=[^_])//g
             if $self->mapping->{strip_separating_underscores};
         my $mapping = $indexes->{$qualifier}
